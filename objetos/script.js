@@ -62,3 +62,13 @@ menu.largura = 500;
 menu.volume = "50ml"
 console.log(menu);
 
+// PALAVRA CHAVE THIS
+let tamanho = 120;
+let menuObj = {
+    largura: 800,
+    tamanho: 50,
+    metadeTamanho(){
+        return this.tamanho / 2; // Sem o this, o sistema faria 120 / 2 = 60
+    }
+}
+console.log(menuObj.metadeTamanho()); // Para passar o argumento de uma função que esta dentro do objeto é preciso chamar o objeto e dar . e nome da função, ai sim passar o argumento!
