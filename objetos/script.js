@@ -94,9 +94,22 @@ var carro = {
     preco: 1000,
     portas: 4,
     marca: 'Audi',
-  }
-  
-  // Crie um objeto de um cachorro que represente um labrador,
-  // preto com 10 anos, que late ao ver um homem
-  
-  
+};
+console.log(carro.preco);
+carro.preco = 3000
+console.log(carro.preco);
+
+// Crie um objeto de um cachorro que represente um labrador, preto com 10 anos, que late ao ver um homem
+let cachorro = {
+    raca: 'Labrador',
+    cor: 'Preto',
+    idade: 10,
+    latir(homem) {
+        if(homem.toLowerCase() === 'homem'.toLowerCase()){
+            return 'AU AU AU AU AU'
+        }else {
+            return 'Não é homem!'
+        }
+    }
+}
+console.log(cachorro.latir('homem'))
