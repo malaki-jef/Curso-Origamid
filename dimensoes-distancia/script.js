@@ -50,18 +50,16 @@ window.addEventListener('load', function() {
 // Verifique se os links da página possuem o mínimo recomendado para telas utilizadas com o dedo. (48px/48px de acordo com o google)
 const links = document.querySelectorAll('a');
 links.forEach(function(a) {
-    const linkWidth = a.offsetWidth;
-    const linkHeight = a.offsetHeight;
-    if(linkWidth >= 48 && linkHeight >= 48) {
-        console.log('Tem o minimo recomendado');
+    if(a.offsetWidth >= 48 && a.offsetHeight >= 48) {
+        console.log('Tem o minimo recomendado!!');
     } else {
         console.log('Não possui o minimo recomendavel que é 48px')
     }
-}); // REVISAR 21/07 Esse exercicio.
+}); 
 
 // Se o browser for menor que 720px, adicione a classe menu-mobile ao menu
-const body = document.querySelector('body');
-if(body.offsetWidth < 720) {
+const browserSmall = window.matchMedia('(max-width: 720px)').matches;
+if(browserSmall) {
     const menu = document.querySelector('.menu');
     menu.classList.add('menu-mobile');
-}
+};
