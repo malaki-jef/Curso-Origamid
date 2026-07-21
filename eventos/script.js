@@ -26,3 +26,33 @@ function callback(event) { // Event aqui vai trazer informações do evento, pro
   console.log(event);
 };
 imgs.addEventListener('click', callback);
+
+// Propriedade do EVENT
+
+function executarCallback(event) {
+  const currentTarget = event.currentTarget; // this
+  const target = event.target; // onde o clique ocorreu
+  const type = event.type; // tipo de evento
+  const path = event.composedPath();
+  console.log(currentTarget, target, type, path);
+}
+document.addEventListener('click', executarCallback);
+/*
+currentTarget =	Elemento com o listener
+target =	Elemento clicado de fato
+type =	Tipo do evento ("click", etc)
+composedPath() =	Caminho de propagação (substitui path)
+*/
+
+
+// FOREACH E EVENTOS
+const imagens = document.querySelectorAll('img');
+
+function imgSrc(event) {
+  const src = event.currentTarget.getAttribute('src');
+  console.log(src);
+}
+
+imagens.forEach((img) => {
+  img.addEventListener('click', imgSrc);
+});
