@@ -96,3 +96,11 @@ bodyRemove.forEach(function(el){
 });
 
 // Se o usuário clicar na tecla (t), aumente todo o texto do site. 
+document.addEventListener('keydown', function(event) {
+  if(event.key.toLowerCase() === "t") {
+    const tamanhoTxt = document.querySelectorAll('p');
+    tamanhoTxt.forEach(function(e) {
+      e.style.fontSize = "45px"
+    });
+  };
+});
