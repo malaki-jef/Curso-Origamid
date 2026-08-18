@@ -1,4 +1,5 @@
 // Função construtora com objeto seco, tudo aponta para carro.
+/*
 const carro = {
 marca: 'Marca',
 preco: 0,
@@ -27,3 +28,15 @@ const fiat2 = new Carro2('Fiat', 3000);
 
 console.log(honda2);
 console.log(fiat2);
+*/
+
+function Carro(marca, precoInicial) {
+    const taxa = 1.2;
+    const precoFinal = precoInicial * taxa;
+    this.marca = marca;
+    this.preco = precoFinal;
+    console.log(this);
+  }
+  
+  const honda = new Carro('Honda', 2000);
+  
