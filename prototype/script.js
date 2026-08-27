@@ -34,6 +34,19 @@ Array.from(lista);
 console.log(Object.getOwnPropertyNames(Array));
 console.log(Object.getOwnPropertyNames(Array.prototype));
 
+
+function Carro(marca) {
+  this.marca = marca;
+}
+Carro.prototype.buzinar = function() {
+  console.log('Bi bi!');
+};
+const honda = new Carro('Honda');
+
+console.log(honda.hasOwnProperty('marca'));    // true  → é do próprio objeto
+console.log(honda.hasOwnProperty('buzinar'));  // false → não é do objeto...
+honda.buzinar();                  // ...mas funciona mesmo assim!
+
 */
 
 // EXERCICIOS
@@ -47,33 +60,38 @@ function Pessoas (nome, sobreNome, idade) {
   this.nome = nome;
   this.sobreNome = sobreNome;
   this.idade = idade;
-}
+};
 
+Pessoas.prototype.todoNome = function() {
+  return console.log(`${this.nome} ${this.sobreNome}`)
+}
 
 const nomeCompleto = new Pessoas("Jefferson","Malaki",30)
-Pessoas.todoNome = function() {
-  return this.nome + this.sobreNome
-}
+
 
 console.log(nomeCompleto);
-console.log(Pessoas.todoNome());
+console.log(nomeCompleto.todoNome());
 
 
 // Liste os métodos acessados por 
 // dados criados com NodeList,
 // HTMLCollection, Document
 
-// Liste os construtores dos dados abaixo
-/*const li = document.querySelector('li');
+console.log(NodeList.prototype)
+console.log(NodeList.constructor.name)
+console.log(HTMLCollection.prototype)
+console.log(Document.prototype)
 
-li;
-li.click;
-li.innerText;
-li.value;
-li.hidden;
-li.offsetLeft;
-li.click();
+// Liste os construtores dos dados abaixo
+const li = document.querySelector('li');
+
+li; // HTMLLIElement
+li.click; // Function
+li.innerText; // String
+li.value; // Number
+li.hidden; // boolean
+li.offsetLeft; // Number
+li.click(); // undefined
 
 // Qual o construtor do dado abaixo:
-li.hidden.constructor.name;
-*/
+li.hidden.constructor.name; // String
