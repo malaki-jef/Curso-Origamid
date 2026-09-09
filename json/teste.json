@@ -1,0 +1,30 @@
+
+[{
+    "nome": "João",
+    "idade": 20,
+    "esta_trabalhando": true,
+    "detalhes_do_usuario": {
+        "cor_preferida": "azul",
+        "hobbies": ["ler", "programar", "viajar"]
+    },
+    "lista_de_compras": [
+        "arroz",
+        "feijão",
+        "carne"
+    ]
+},
+{
+    "nome": "Maria",
+    "idade": 25,
+    "esta_trabalhando": false,
+    "detalhes_do_usuario": {
+        "cor_preferida": null,
+        "hobbies": ["comprar", "viajar", "fazer curso"]
+    },
+    "lista_de_compras": [
+        "celular",
+        "notebook",
+        "mouse"
+    ]
+}
+]
