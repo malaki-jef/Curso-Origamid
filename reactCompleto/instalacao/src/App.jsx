@@ -5,4 +5,4 @@ const App = () => {
     return <a href="https://google.com.br">Google</a>
 }
 
-export default App;
+export default App; 
