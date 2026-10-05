@@ -1,8 +1,15 @@
 import React from 'react'
+import HandleClick from './HandleClick'
 
 const Button = () => {
+
+
+  <HandleClick />
+
   return (
-    <button>Enviar</button>
+ 
+    <button onClick={HandleClick}>Clicar</button>
+    
   )
 }
 

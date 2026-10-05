@@ -1,19 +1,16 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
 import Form from './form/Form';
+import Quadrado from './form/Quadrado';
+
 
 const App = () => {
+  
 
   return (
-    <div>
-      <h1>App</h1>
-      <Header />
-      <Footer />
-
-
+    <>
       <Form />
-    </div>    
+      <Quadrado />
+    </>
   )
 
 };

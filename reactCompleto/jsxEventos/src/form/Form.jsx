@@ -1,13 +1,16 @@
 import React from 'react'
-import Button from './button'
 import Input from './Input'
+import Button from './button'
 
 const Form = () => {
+
   return (
-    <form>
-        <Input />
-        <Button />
-    </form>
+    <>
+    <div>
+      <Input /> 
+      <Button />     
+    </div>
+    </>
   )
 }
 
